@@ -12,7 +12,6 @@
             scroll-behavior: smooth;
         }
 
-        /* Custom Tailwind-like Animations */
         .fade-in {
             animation: fadeIn 1s ease-in-out both;
         }
@@ -59,7 +58,6 @@
             }
         }
 
-        /* FAQ Toggle */
         .faq input:checked~.answer {
             max-height: 500px;
             padding: 10px 0;
@@ -76,7 +74,6 @@
         <div class="container mx-auto px-4 py-4 flex justify-between items-center relative">
             <h1 class="text-2xl font-bold tracking-wide">LearnSpace</h1>
 
-            <!-- Hamburger for mobile -->
             <div class="md:hidden">
                 <input type="checkbox" id="menu-toggle" class="hidden peer" />
                 <label for="menu-toggle" class="cursor-pointer">
@@ -86,7 +83,6 @@
                     </svg>
                 </label>
 
-                <!-- Mobile Menu -->
                 <div
                     class="absolute left-0 top-full w-full bg-blue-600 text-white mt-2 rounded-md p-4 hidden peer-checked:block">
                     <a href="#home" class="block py-2">🏠 Home</a>
@@ -96,7 +92,6 @@
                 </div>
             </div>
 
-            <!-- Desktop Menu -->
             <div class="hidden md:flex space-x-6">
                 <a href="#home" class="hover:underline">Home</a>
                 <a href="#about" class="hover:underline">About</a>
@@ -107,7 +102,6 @@
     </nav>
 
 
-    <!-- Hero -->
     <section id="home" class="container mx-auto px-6 py-12 text-center fade-in">
         <h2 class="text-4xl font-bold mb-4 text-blue-800">Explore. Learn. Grow.</h2>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto mb-6">
@@ -119,7 +113,6 @@
         </a>
     </section>
 
-    <!-- About -->
     <section id="about" class="container mx-auto px-6 py-10 bg-white rounded-lg shadow-md slide-in-up">
         <h3 class="text-2xl font-semibold mb-3 text-blue-700">📘 About LearnSpace</h3>
         <p class="text-gray-700 leading-relaxed">
@@ -129,7 +122,6 @@
         </p>
     </section>
 
-    <!-- Blog Section -->
     <section id="blog" class="container mx-auto px-6 py-12 zoom-in">
         <h3 class="text-2xl font-semibold text-blue-700 mb-6">🧠 Web Dev Insights</h3>
         <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -152,7 +144,6 @@
         </div>
     </section>
 
-    <!-- FAQ Section -->
     <section id="faq" class="container mx-auto px-6 py-10 bg-white rounded-lg shadow-md slide-in-up">
         <h3 class="text-2xl font-semibold text-blue-700 mb-4">❓ Frequently Asked Questions</h3>
 
@@ -182,7 +173,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer class="bg-blue-700 text-white text-center py-4 mt-10 fade-in">
         <p class="text-sm">&copy; 2025 LearnSpace. Designed with care by Yahyah Khan.</p>
     </footer>
