@@ -20,11 +20,25 @@ let isOpen = false;
 if (btn) {
   btn.addEventListener("click", () => {
     isOpen = !isOpen;
-    menu.classList.toggle("-translate-y-full");
-    menu.classList.toggle("translate-y-0");
-    menu.classList.toggle("opacity-0");
-    menu.classList.toggle("opacity-100");
-    menu.classList.toggle("pointer-events-none");
+
+    if (isOpen) {
+      menu.classList.remove(
+        "-translate-y-full",
+        "opacity-0",
+        "pointer-events-none",
+        "scale-95"
+      );
+      menu.classList.add("translate-y-0", "opacity-100", "scale-100");
+    } else {
+      menu.classList.remove("translate-y-0", "opacity-100", "scale-100");
+      menu.classList.add("-translate-y-full", "opacity-0", "scale-95");
+
+      // Delay pointer-events removal to allow animation to finish
+      setTimeout(() => {
+        menu.classList.add("pointer-events-none");
+      }, 300);
+    }
+
     bar1.classList.toggle("rotate-45");
     bar1.classList.toggle("translate-y-2");
     bar2.classList.toggle("opacity-0");

@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LearnSpace</title>
-    <link rel="icon" type="image/x-icon" href="./learnspace_logo.jpeg" />
-    <link rel="stylesheet" href="./script.css">
+    <link rel="icon" type="image/x-icon" href="./assets/learnspace_logo.png" />
+    <link rel="stylesheet" href="./script.css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
@@ -68,23 +68,22 @@
 
         <!-- Mobile Nav -->
         <div id="mobile-menu"
-            class="md:hidden fixed top-0 left-0 w-full bg-blue-700 text-white px-6 pt-6 pb-8 transform -translate-y-full transition-transform duration-300 ease-in-out z-40 shadow-lg opacity-0 pointer-events-none">
+            class="md:hidden fixed top-0 left-0 w-full bg-blue-700 text-white px-6 pt-6 pb-8 transform -translate-y-full opacity-0 scale-95 transition-all duration-300 ease-in-out z-40 shadow-lg pointer-events-none">
             <div class="mb-6">
                 <h1 class="text-xl font-bold">LearnSpace</h1>
             </div>
             <div class="flex flex-col space-y-4">
-                <a href="#home">🏠 Home</a>
-                <a href="#about">ℹ️ About</a>
-                <a href="#insight">📰 Insight</a>
-                <a href="#faq">❓ FAQ</a>
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#insight">Insight</a>
+                <a href="#faq">FAQ</a>
             </div>
         </div>
     </nav>
 
     <!-- Hero with parallax and glassmorphism -->
     <section class="relative overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?fit=crop&w=1470&q=80"
-            class="hero-parallax absolute top-0 left-0 w-full h-full object-cover z-[-1]" />
+        <img src="./assets/bg.jpeg" class="hero-parallax absolute top-0 left-0 w-full h-full object-cover z-[-1]" />
         <div class="backdrop-blur-sm bg-blue-900/60 py-24 px-6 text-center text-white shadow-xl" data-aos="fade-up">
             <h2
                 class="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent">
@@ -103,192 +102,259 @@
     <br /><br />
 
     <!-- About -->
-    <section id="about" class="container mx-auto px-6 py-12 bg-white rounded-lg shadow-md" data-aos="fade-right">
-        <h3 class="text-2xl font-semibold mb-3 text-blue-700">
-            📘 About LearnSpace
-        </h3>
-        <p class="text-gray-700">
-            LearnSpace is a beginner-friendly educational website built entirely
-            with HTML and Tailwind CSS. It introduces students to responsive design,
-            layout containers, and UI components like cards — all without JavaScript
-            frameworks.
-        </p>
-    </section>
+    <div class="px-4 sm:px-6 md:px-8 lg:px-12 xl:px-20">
+        <section id="about" class="container mx-auto px-6 py-12 bg-white rounded-lg shadow-md" data-aos="fade-right">
+            <h3 class="text-2xl font-semibold mb-3 text-blue-700">
+                📘 About LearnSpace
+            </h3>
+            <p class="text-gray-700">
+                LearnSpace is a beginner-friendly educational website built entirely with HTML and Tailwind CSS. It
+                introduces students to responsive design, layout containers, and UI components like cards — all without
+                JavaScript frameworks.
+                Whether you're just getting started or brushing up on your frontend skills, LearnSpace offers a clean,
+                structured way to learn web development basics without distractions. It's a perfect playground for
+                students, educators, or anyone exploring modern UI design.
+            </p>
+        </section>
 
-    <br />
+        <br />
 
-    <!-- Instructor Profile -->
-    <section id="instructor" class="container mx-auto px-6 py-12 bg-white rounded-lg shadow-md overflow-hidden"
-        data-aos="fade-up">
-        <h3 class="text-2xl font-semibold text-blue-700 mb-6 text-center">
-            👨‍🏫 Meet the Creator
-        </h3>
-        <div class="flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
-            <div class="flex-shrink-0 self-center md:self-start">
-                <img src="./profile.png" alt="Creator Photo"
-                    class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-md border-4 border-blue-300" />
-            </div>
-            <div class="text-center md:text-left">
-                <h4 class="text-xl font-bold text-gray-800 mb-2">Yahyah Khan</h4>
-                <p class="text-gray-600 max-w-xl">
-                    Hey! I'm Yahyah — the mind behind LearnSpace. I built this platform
-                    to help beginners get comfortable with HTML, Tailwind CSS, and
-                    responsive web design. Let’s build the web, one line at a time 🚀
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Insights -->
-    <section id="insight" class="container mx-auto px-6 py-12" data-aos="fade-up">
-        <h3 class="text-2xl font-semibold text-blue-700 mb-6">
-            🧠 Web Dev Insights
-        </h3>
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition" data-aos="fade-up">
-                <h4 class="text-xl font-bold text-blue-800">Why Tailwind CSS?</h4>
-                <p class="text-sm text-gray-700 mt-2">
-                    Tailwind uses utility classes for faster UI development without
-                    writing custom CSS.
-                </p>
-            </div>
-            <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition" data-aos="fade-up"
-                data-aos-delay="100">
-                <h4 class="text-xl font-bold text-blue-800">HTML Structure</h4>
-                <p class="text-sm text-gray-700 mt-2">
-                    Semantic HTML improves accessibility and SEO. Use proper tags like
-                    &lt;section&gt; and &lt;nav&gt;.
-                </p>
-            </div>
-            <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition" data-aos="fade-up"
-                data-aos-delay="200">
-                <h4 class="text-xl font-bold text-blue-800">Responsive Tips</h4>
-                <p class="text-sm text-gray-700 mt-2">
-                    Use responsive utilities like <code>md:</code> and
-                    <code>lg:</code> for cross-device compatibility.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- Courses -->
-    <section id="courses" class="container mx-auto px-6 py-12 bg-gray-100 rounded-lg shadow-md" data-aos="fade-up">
-        <h3 class="text-2xl font-semibold text-blue-700 mb-6 text-center">
-            📚 Featured Courses
-        </h3>
-        <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-            <div class="bg-white p-5 rounded-lg shadow border-t-4 border-blue-600" data-aos="zoom-in">
-                <h4 class="text-xl font-bold text-blue-800 mb-2">
-                    HTML for Beginners
-                </h4>
-                <p class="text-sm text-gray-700">
-                    Learn the structure of web pages using basic HTML tags and layout
-                    patterns.
-                </p>
-            </div>
-            <div class="bg-white p-5 rounded-lg shadow border-t-4 border-green-600" data-aos="zoom-in"
-                data-aos-delay="100">
-                <h4 class="text-xl font-bold text-green-800 mb-2">CSS Basics</h4>
-                <p class="text-sm text-gray-700">
-                    Understand styling, colors, spacing and layout with Tailwind CSS.
-                </p>
-            </div>
-            <div class="bg-white p-5 rounded-lg shadow border-t-4 border-purple-600" data-aos="zoom-in"
-                data-aos-delay="200">
-                <h4 class="text-xl font-bold text-purple-800 mb-2">
-                    Responsive Design
-                </h4>
-                <p class="text-sm text-gray-700">
-                    Make your website look great on all screen sizes using mobile-first
-                    techniques.
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <br />
-
-    <!-- Testimonials -->
-    <section id="testimonials" class="container mx-auto px-6 py-12 bg-white rounded-lg shadow-md" data-aos="fade-up">
-        <h3 class="text-2xl font-semibold text-blue-700 mb-6 text-center">
-            💬 What Our Students Say
-        </h3>
-        <div class="relative w-full overflow-hidden">
-            <div id="carousel" class="flex transition-transform duration-500 w-full">
-                <div class="w-full flex-shrink-0 px-4">
-                    <p class="text-gray-700 text-center max-w-xl mx-auto italic">
-                        "LearnSpace helped me finally understand responsive design. The
-                        layout is so smooth!"
-                    </p>
-                    <p class="text-blue-700 font-semibold text-center mt-2">
-                        ~ Riya S.
-                    </p>
+        <!-- Instructor Profile -->
+        <section id="instructor" class="container mx-auto px-6 py-12 bg-white rounded-lg shadow-md overflow-hidden"
+            data-aos="fade-up">
+            <h3 class="text-2xl font-semibold text-blue-700 mb-6 text-center">
+                👨‍🏫 Meet the Creator
+            </h3>
+            <div class="flex flex-col md:flex-row md:items-center gap-6 md:gap-10">
+                <div class="flex-shrink-0 self-center md:self-start">
+                    <img src="./assets/profile.png" alt="Creator Photo"
+                        class="w-32 h-32 md:w-40 md:h-40 rounded-full object-cover shadow-md border-4 border-blue-300" />
                 </div>
-                <div class="w-full flex-shrink-0 px-4">
-                    <p class="text-gray-700 text-center max-w-xl mx-auto italic">
-                        "Tailwind CSS was confusing until I used this site. Clean, minimal
-                        and informative!"
-                    </p>
-                    <p class="text-blue-700 font-semibold text-center mt-2">
-                        ~ Aman T.
+                <div class="text-center md:text-left">
+                    <h4 class="text-xl font-bold text-gray-800 mb-2">Yahyah Khan</h4>
+                    <p class="text-gray-600 max-w-xl">
+                        Hey! I'm Yahyah — the mind behind LearnSpace. I built this platform to help beginners get
+                        comfortable with HTML, Tailwind CSS, and responsive web design. My goal is to make learning tech
+                        approachable, fun, and genuinely useful.
+                        With every section, I’ve kept simplicity and clarity in mind so you can focus on what matters —
+                        learning by doing. Let’s build the web, one line at a time 🚀
                     </p>
                 </div>
             </div>
-            <div class="flex justify-center mt-4 space-x-4">
-                <button onclick="showSlide(0)" class="w-3 h-3 rounded-full bg-blue-400"></button>
-                <button onclick="showSlide(1)" class="w-3 h-3 rounded-full bg-gray-300"></button>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <br />
-
-    <!-- FAQ Section -->
-    <section id="faq" class="container mx-auto px-6 py-12 bg-white rounded-lg shadow-md" data-aos="fade-up">
-        <h3 class="text-3xl font-semibold text-blue-700 mb-6 flex items-center gap-2">
-            <span class="text-2xl">❓</span> Frequently Asked Questions
-        </h3>
-
-        <div class="space-y-4" id="faq-wrapper">
-            <!-- FAQ Item -->
-            <div class="faq-item border border-blue-200 rounded-xl overflow-hidden shadow transition">
-                <button
-                    class="faq-question w-full text-left px-5 py-3 font-medium text-gray-800 flex justify-between items-center focus:outline-none hover:bg-blue-50">
-                    <span>Q: Does this site use JavaScript?</span>
-                    <svg class="w-5 h-5 text-blue-600 transition-transform duration-300" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </button>
-                <div
-                    class="faq-answer px-5 text-gray-600 max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
-                    <p class="py-3">
-                        A: Very minimal! Only basic interaction handling for navbar and
-                        carousel.
+        <!-- Insights -->
+        <section id="insight" class="container mx-auto px-6 py-12" data-aos="fade-up">
+            <h3 class="text-2xl font-semibold text-blue-700 mb-6">
+                🧠 Web Dev Insights
+            </h3>
+            <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition" data-aos="fade-up">
+                    <h4 class="text-xl font-bold text-blue-800">Why Tailwind CSS?</h4>
+                    <p class="text-sm text-gray-700 mt-2">
+                        Tailwind uses utility classes for faster UI development without
+                        writing custom CSS.
+                    </p>
+                </div>
+                <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition" data-aos="fade-up"
+                    data-aos-delay="100">
+                    <h4 class="text-xl font-bold text-blue-800">HTML Structure</h4>
+                    <p class="text-sm text-gray-700 mt-2">
+                        Semantic HTML improves accessibility and SEO. Use proper tags like
+                        &lt;section&gt; and &lt;nav&gt;.
+                    </p>
+                </div>
+                <div class="bg-white p-5 rounded-lg shadow-md hover:shadow-lg transition" data-aos="fade-up"
+                    data-aos-delay="200">
+                    <h4 class="text-xl font-bold text-blue-800">Responsive Tips</h4>
+                    <p class="text-sm text-gray-700 mt-2">
+                        Use responsive utilities like <code>md:</code> and
+                        <code>lg:</code> for cross-device compatibility.
                     </p>
                 </div>
             </div>
+        </section>
 
-            <!-- FAQ Item -->
-            <div class="faq-item border border-blue-200 rounded-xl overflow-hidden shadow transition">
-                <button
-                    class="faq-question w-full text-left px-5 py-3 font-medium text-gray-800 flex justify-between items-center focus:outline-none hover:bg-blue-50">
-                    <span>Q: Is it mobile-friendly?</span>
-                    <svg class="w-5 h-5 text-blue-600 transition-transform duration-300" fill="none"
-                        stroke="currentColor" viewBox="0 0 24 24">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
-                    </svg>
-                </button>
-                <div
-                    class="faq-answer px-5 text-gray-600 max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
-                    <p class="py-3">
-                        A: Absolutely. It’s responsive across all screen sizes using
-                        Tailwind utilities.
+        <!-- Courses -->
+        <section id="courses" class="container mx-auto px-6 py-12 bg-white rounded-lg shadow-md" data-aos="fade-up">
+            <h3 class="text-2xl font-semibold text-blue-700 mb-6 text-center">
+                📚 Featured Courses
+            </h3>
+            <div class="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
+                <div class="bg-white p-5 rounded-lg shadow border-t-4 border-blue-600" data-aos="zoom-in">
+                    <h4 class="text-xl font-bold text-blue-800 mb-2">
+                        HTML for Beginners
+                    </h4>
+                    <p class="text-sm text-gray-700">
+                        Learn the structure of web pages using basic HTML tags and layout patterns. You'll discover how
+                        to write semantic markup, organize content using headings, paragraphs, lists, and understand how
+                        browsers read your code. It's the foundation of all web development!
+                    </p>
+
+                </div>
+                <div class="bg-white p-5 rounded-lg shadow border-t-4 border-green-600" data-aos="zoom-in"
+                    data-aos-delay="100">
+                    <h4 class="text-xl font-bold text-green-800 mb-2">CSS Basics</h4>
+                    <p class="text-sm text-gray-700">
+                        Understand styling, colors, spacing and layout with Tailwind CSS. This course introduces you to
+                        utility-first design, color theory, padding/margin tricks, and how to create clean designs
+                        without writing custom CSS. It's fast, flexible, and very beginner-friendly.
                     </p>
                 </div>
+                <div class="bg-white p-5 rounded-lg shadow border-t-4 border-purple-600" data-aos="zoom-in"
+                    data-aos-delay="200">
+                    <h4 class="text-xl font-bold text-purple-800 mb-2">
+                        Responsive Design
+                    </h4>
+                    <p class="text-sm text-gray-700">
+                        Make your website look great on all screen sizes using mobile-first techniques. You'll learn how
+                        to use Tailwind's responsive breakpoints, adjust typography and layout across devices, and craft
+                        flexible designs that adapt beautifully from mobile to desktop.
+                    </p>
+
+                </div>
             </div>
-        </div>
-    </section>
+        </section>
+
+        <br />
+
+        <!-- Testimonials -->
+        <section id="testimonials" class="container mx-auto px-6 py-12 bg-white rounded-lg shadow-md"
+            data-aos="fade-up">
+            <h3 class="text-2xl font-semibold text-blue-700 mb-6 text-center">
+                💬 What Our Students Say
+            </h3>
+            <div class="relative w-full overflow-hidden">
+                <div id="carousel" class="flex transition-transform duration-500 w-full">
+                    <div class="w-full flex-shrink-0 px-4">
+                        <p class="text-gray-700 text-center max-w-xl mx-auto italic">
+                            "LearnSpace helped me finally understand responsive design. The layout is so smooth! I love
+                            how the site adapts perfectly on my phone and laptop. It’s like having a teacher guide me
+                            while I code — clear, structured, and fun to follow."
+                        </p>
+
+                        <p class="text-blue-700 font-semibold text-center mt-2">
+                            ~ Riya S.
+                        </p>
+                    </div>
+                    <div class="w-full flex-shrink-0 px-4">
+                        <p class="text-gray-700 text-center max-w-xl mx-auto italic">
+                            "Tailwind CSS was confusing until I used this site. Clean, minimal and informative! The
+                            examples made everything click for me. I now understand how utility classes work and even
+                            built my first portfolio page after this!"
+                        </p>
+
+                        <p class="text-blue-700 font-semibold text-center mt-2">
+                            ~ Aman T.
+                        </p>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-4 space-x-4">
+                    <button onclick="showSlide(0)" class="w-3 h-3 rounded-full bg-blue-400"></button>
+                    <button onclick="showSlide(1)" class="w-3 h-3 rounded-full bg-gray-300"></button>
+                </div>
+            </div>
+            <script>
+                let currentSlide = 0;
+                const totalSlides = document.querySelectorAll("#carousel > div").length;
+                const carousel = document.getElementById("carousel");
+
+                function showSlide(index) {
+                    currentSlide = index;
+                    const slideWidth = carousel.offsetWidth;
+                    carousel.style.transform = `translateX(-${index * slideWidth}px)`;
+
+                    const buttons = document.querySelectorAll("#testimonials button");
+                    buttons.forEach((btn, i) => {
+                        btn.classList.toggle("bg-blue-400", i === index);
+                        btn.classList.toggle("bg-gray-300", i !== index);
+                    });
+                }
+
+                // Auto-Rotate every 5 seconds
+                setInterval(() => {
+                    currentSlide = (currentSlide + 1) % totalSlides;
+                    showSlide(currentSlide);
+                }, 5000);
+
+                // Swipe support for mobile
+                let startX = 0;
+
+                carousel.addEventListener("touchstart", (e) => {
+                    startX = e.touches[0].clientX;
+                });
+
+                carousel.addEventListener("touchend", (e) => {
+                    const endX = e.changedTouches[0].clientX;
+                    const diff = startX - endX;
+
+                    if (Math.abs(diff) > 50) {
+                        if (diff > 0) {
+                            // swipe left
+                            currentSlide = (currentSlide + 1) % totalSlides;
+                        } else {
+                            // swipe right
+                            currentSlide = (currentSlide - 1 + totalSlides) % totalSlides;
+                        }
+                        showSlide(currentSlide);
+                    }
+                });
+
+            </script>
+        </section>
+
+        <br />
+
+        <!-- FAQ Section -->
+        <section id="faq" class="container mx-auto px-6 py-12 bg-white rounded-lg shadow-md" data-aos="fade-up">
+            <h3 class="text-3xl font-semibold text-blue-700 mb-6 flex items-center gap-2">
+                <span class="text-2xl">❓</span> Frequently Asked Questions
+            </h3>
+
+            <div class="space-y-4" id="faq-wrapper">
+                <!-- FAQ Item -->
+                <div class="faq-item border border-blue-200 rounded-xl overflow-hidden shadow transition">
+                    <button
+                        class="faq-question w-full text-left px-5 py-3 font-medium text-gray-800 flex justify-between items-center focus:outline-none hover:bg-blue-50">
+                        <span>Q: Does this site use JavaScript?</span>
+                        <svg class="w-5 h-5 text-blue-600 transition-transform duration-300" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div
+                        class="faq-answer px-5 text-gray-600 max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        <p class="py-3">
+                            A: Very minimal! Only basic interaction handling for navbar and carousel. This keeps the
+                            codebase light and helps beginners understand each function line by line. We avoid
+                            over-complication so learners can focus on structure and layout first.
+                        </p>
+
+                    </div>
+                </div>
+
+                <!-- FAQ Item -->
+                <div class="faq-item border border-blue-200 rounded-xl overflow-hidden shadow transition">
+                    <button
+                        class="faq-question w-full text-left px-5 py-3 font-medium text-gray-800 flex justify-between items-center focus:outline-none hover:bg-blue-50">
+                        <span>Q: Is it mobile-friendly?</span>
+                        <svg class="w-5 h-5 text-blue-600 transition-transform duration-300" fill="none"
+                            stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </button>
+                    <div
+                        class="faq-answer px-5 text-gray-600 max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                        <p class="py-3">
+                            A: Absolutely. It’s responsive across all screen sizes using Tailwind utilities. You can
+                            test this by resizing your browser or visiting from different devices. Every section adjusts
+                            using breakpoints to make it easy to read and navigate.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
 
     <!-- Footer -->
     <footer class="bg-blue-700 text-white text-center py-4 mt-10">
