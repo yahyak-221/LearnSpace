@@ -1,7 +1,97 @@
+/* ===============================
+   Base Styles
+================================= */
 html {
   scroll-behavior: smooth;
 }
 
+body {
+  background: linear-gradient(to bottom right, #fbeaff, #ffffff);
+}
+
+/* ===============================
+   Scroll Indicator
+================================= */
+#scroll-indicator {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 4px;
+  background-color: #ffffff;
+  z-index: 9999;
+}
+
+/* ===============================
+   Text Selection
+================================= */
+::selection {
+  background-color: #c7d2fe; /* soft indigo-200 */
+  color: #1e40af; /* strong blue-800 */
+}
+
+::-moz-selection {
+  background-color: #c7d2fe;
+  color: #1e40af;
+}
+
+/* ===============================
+   Learn More Button
+================================= */
+.learn-more-btn {
+  position: relative;
+  display: inline-block;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: 600;
+  color: #1d4ed8;
+  background-color: white;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  z-index: 1;
+  transform: translateZ(0);
+  will-change: transform, color, box-shadow;
+  transition: transform 0.4s cubic-bezier(0.25, 1, 0.5, 1), color 0.4s ease,
+    box-shadow 0.4s ease;
+}
+
+.learn-more-btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  opacity: 0;
+  background: linear-gradient(to right, #818cf8, #3b82f6, #a855f7);
+  transition: opacity 0.2s ease-in-out;
+}
+
+.learn-more-btn:hover {
+  transform: scale(1.05);
+  color: white;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+}
+
+.learn-more-btn:hover::before {
+  opacity: 1;
+}
+
+/* ===============================
+   FAQ Section
+================================= */
+.faq input:checked ~ .answer {
+  max-height: 500px;
+  padding: 10px 0;
+}
+
+.peer:checked ~ .peer-checked\:block {
+  display: block;
+}
+
+/* ===============================
+   Animations
+================================= */
 .fade-in {
   animation: fadeIn 1s ease-in-out both;
 }
@@ -14,11 +104,13 @@ html {
   animation: zoomIn 0.8s ease-out both;
 }
 
+/* ===============================
+   Keyframes
+================================= */
 @keyframes fadeIn {
   from {
     opacity: 0;
   }
-
   to {
     opacity: 1;
   }
@@ -29,7 +121,6 @@ html {
     transform: translateY(40px);
     opacity: 0;
   }
-
   to {
     transform: translateY(0);
     opacity: 1;
@@ -41,18 +132,8 @@ html {
     transform: scale(0.9);
     opacity: 0;
   }
-
   to {
     transform: scale(1);
     opacity: 1;
   }
-}
-
-.faq input:checked ~ .answer {
-  max-height: 500px;
-  padding: 10px 0;
-}
-
-.peer:checked ~ .peer-checked\:block {
-  display: block;
 }
