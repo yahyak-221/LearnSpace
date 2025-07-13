@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>LearnSpace</title>
     <link rel="icon" type="image/x-icon" href="./learnspace_logo.jpeg" />
+    <link rel="stylesheet" href="./script.css">
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
     <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script src="https://unpkg.com/simple-parallax-js@5.6.2/dist/simpleParallax.min.js"></script>
+
     <style>
         /* Webkit Browsers (Chrome, Safari, Edge) */
         ::-webkit-scrollbar {
@@ -79,9 +82,9 @@
     </nav>
 
     <!-- Hero with parallax and glassmorphism -->
-    <section class="bg-fixed bg-center bg-cover" style="
-        background-image: url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?fit=crop&w=1470&q=80');
-      ">
+    <section class="relative overflow-hidden">
+        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?fit=crop&w=1470&q=80"
+            class="hero-parallax absolute top-0 left-0 w-full h-full object-cover z-[-1]" />
         <div class="backdrop-blur-sm bg-blue-900/60 py-24 px-6 text-center text-white shadow-xl" data-aos="fade-up">
             <h2
                 class="text-4xl font-bold mb-4 bg-gradient-to-r from-cyan-300 via-blue-400 to-purple-400 bg-clip-text text-transparent">

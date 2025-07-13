@@ -65,3 +65,9 @@ function showSlide(index) {
     btn.classList.toggle("bg-gray-300", i !== index);
   });
 }
+
+//paralaxx
+document.addEventListener("DOMContentLoaded", () => {
+  const heroImage = document.querySelector(".hero-parallax");
+  if (heroImage) new simpleParallax(heroImage, { scale: 1.3, delay: 0.2 });
+});
